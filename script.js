@@ -3,6 +3,7 @@ const url="https://api.github.com/users";
 const searchinp=document.getElementById("searchinput");
 const searchbtninp=document.getElementById("search-btn");
 const profilecontainerid=document.getElementById("profilecontainer");
+const loadingid=document.getElementById("loading");
 
 const genarateprofile = (profile)=>{
 return(
@@ -18,7 +19,7 @@ return(
                 <h1>${profile.login}</h1>
             </div>
         </div>
-        <a href="${profile.repos_url}">
+        <a href="${profile.html_url}" target="_black">
         <button class="primary-btn">CHECK PROFILE</button>
         </a>
     </div>
@@ -48,19 +49,23 @@ return(
 const fetchprofile= async() => {
 
     const username=searchinp.value;
-
+    loadingid.innerText="loading.........";
+    loadingid.style.color="black";
     try {
-        
         const respon= await fetch(`${url}/${username}`);
-        const da=await respon.json();
-        if(da.bio){
-            
+        const data=await respon.json();
+        if(data.bio){
+            loadingid.innerText="";
+            profilecontainer.innerHTML=genarateprofile(data);
+        }else{
+            loadingid.innerHTML=data.message;
+            loadingid.style.color="red";
         }
-        console.log("data", da);
+        console.log("data", data);
     }
     catch(error){
+        loadingid.innerText="";
         console.log({error});
-
     }
 };
 
