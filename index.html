@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GITHUBPROFILEVIEW</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <h1>
-            SEARCH GITHUB PROFILE
-        </h1>
+        <h1>SEARCH GITHUB PROFILE</h1>
         <div class="search">
-            <input type="text" placeholder="ENTER YOUR GITHUB PROFILE ">
+            <input type="text" id="searchinput" name="searchinput" placeholder="ENTER YOUR GITHUB PROFILE ">
+            <button id="search-btn" class="primary-btn">SEARCH</button>
         </div>
+        <div id="profilecontainer"></div>
+        
     </div>
 </body>
 </html>

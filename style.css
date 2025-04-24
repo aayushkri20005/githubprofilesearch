@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+html,body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62%;
+}
+body{
+    font-size: 1.5rem;
+    /* background: linear-gradient(135deg,#24292e,#171e25,#2b3137); */
+}
+.container{
+display: flex;
+height: 100vh;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+}
+.search{
+    display: flex;
+    width: 50%;
+    gap: 0.5rem;
+    max-width: 50rem; 
+}
+.search input{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    background-color: rgb(42, 41, 41);
+    color: aliceblue;
+    outline: #171e25;
+    
+    
+}
+.search input:hover{
+    background-color: rgb(196, 196, 196);
+    color: black;
+}
+.primary-btn{
+background-color: rgb(49, 44, 44);
+color: aliceblue;
+padding: 0.5rem 1rem;
+border: none;
+
+}
+.primary-btn:hover{
+    background-color: rgb(196, 196, 196);
+    color: black;
+}
+.profile-box{
+    padding: 4rem 2rem;
+    box-shadow: 0 0 1rem #171e25;
+    max-width: 70rem;
+    transition: transform 0.5s ease;
+    width: 90%;
+}
+.profile-box:hover{
+    transform: rotate3d(1, 1, 0, 40deg); /* Diagonal rotation */
+    transition: transform 0.5s ease;
+    perspective: 1000px;
+}
+.topsection{
+    display: flex;
+    justify-content: space-between;
+
+}
+.topsection button{
+    align-self: center;
+}
+.left{
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    gap: 1rem;
+}
+.left h1{
+    font-size: 1.6rem;
+    font-family:;
+}
+.avatar{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    background-color: black;
+}
+.avatar img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: black;
+}
+.about{
+    margin: 2rem;
+}
+.status {
+display: grid;
+margin: 2rem;
+grid-template-columns: repeat(auto-fit , minmax(10rem , 1fr));
+}
+.status-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
